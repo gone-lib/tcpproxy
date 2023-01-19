@@ -1,5 +1,7 @@
 # tcpproxy
 
+<!-- fork from `https://github.com/inetaf/tcpproxy` -->
+
 Package tcpproxy lets users build TCP proxies, optionally making routing decisions based on HTTP/1 Host headers and the SNI hostname in TLS connections.
 
 Calling Run (or Start) on a proxy also starts all the necessary listeners.
@@ -15,8 +17,6 @@ The two predefined Target implementations are:
 But Target is an interface, so you can also write your own.
 
 Note that tcpproxy does not do any TLS encryption or decryption. It only (via DialProxy) copies bytes around. The SNI hostname in the TLS header is unencrypted, for better or worse.
-
-This package makes no API stability promises. If you depend on it, vendor it.
 
 ## Install
 
